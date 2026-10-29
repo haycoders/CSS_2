@@ -1,0 +1,36 @@
+/* ===== УРОК: ПСЕВДОЭЛЕМЕНТЫ ===== */
+
+/* пустые абзацы из секции «Структура» оживают: attr(title) берёт текст из атрибута */
+p.text:not(:empty)::after {
+	content: '123123123';
+}
+p.text:empty::after {
+	content: attr(title);
+	color: violet;
+}
+
+
+#test_id::after {
+	content: '123';
+	color: red;
+	text-decoration: underline;
+}
+#test_id::before {
+	content: '456';
+	color: yellowgreen;
+	text-decoration: underline;
+}
+
+p.lead::first-letter {
+	font-size: 30px;
+	color: brown;
+}
+p.lead::first-line {
+	color: red;
+}
+
+/* звёздочка у обязательного поля */
+label.required::after {
+	content: " *";
+	color: red;
+}

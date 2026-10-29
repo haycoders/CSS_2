@@ -1,0 +1,86 @@
+/* ===== УРОК: ПСЕВДОКЛАССЫ ===== */
+/*
+	: — состояние элемента,
+	:: — часть элемента.
+*/
+
+/* порядок важен: :link, :visited, :hover, :active */
+.main_link {
+	color: rgb(30, 188, 188);
+	text-decoration: none;
+}
+/* если ссылку уже открывали в этом браузере, она сразу серая */
+.main_link:visited {
+	color: gray;
+}
+.main_link:hover {
+	color: green;
+	text-decoration: line-through;
+	text-decoration-color: red;
+	cursor: pointer;
+}
+.main_link:active {
+	color: pink;
+}
+
+
+/* :focus сильнее обычного input по специфичности, порядок не важен */
+input:focus { color: red; }
+input { color: blue; }
+
+input:disabled {
+	background: gray;
+	color: #333;
+}
+/* у :enabled и :required специфичность равна, побеждает тот, что ниже */
+input:enabled {
+	background: green;
+}
+input:required {
+	background: orange;
+}
+
+
+p.text:not(:empty) {
+	color: orange;
+}
+p.text:not(:empty)::after {
+	content: '123123123';
+}
+p.text:empty::after {
+	content: attr(title);
+	color: violet;
+}
+/* ограничено секцией .structure, иначе правило поймает абзацы по всей странице */
+.structure p:first-of-type {
+	text-decoration: line-through;
+}
+.structure p:last-of-type {
+	text-decoration: line-through;
+}
+
+
+/* ===== УРОК: nth-child, ПОЛОСАТАЯ ТАБЛИЦА ===== */
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th, td {
+	padding: 10px 14px;
+	text-align: left;
+}
+th {
+	background: #5d84b5;
+	color: #fff;
+}
+/* even = 2, 4, 6... ; odd = 1, 3, 5... ; (3) = только третья ; (3n) = каждая третья ; (-n+2) = первые две */
+tbody tr:nth-child(even) {
+	background: #eef3fa;
+}
+tbody tr:hover {
+	background: #dce9ff;
+}
+/* last-child: последняя ячейка в строке, цену выравниваем вправо */
+th:last-child, td:last-child {
+	text-align: right;
+}

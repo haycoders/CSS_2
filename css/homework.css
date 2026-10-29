@@ -22,3 +22,28 @@
 	font-weight: 600;
 	transition: 0.7s ease-in-out, transform .2s ease;
 }
+
+
+.circle {
+	width: 100px;
+	height: 100px;
+	background: #5825ff;
+	border-radius: 50%;
+}
+.circle:hover {
+	background: orangered;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.circle:active {
+	transform: scale(.9);
+}
+
+.circle div:nth-child(1) {
+	color: burlywood;
+}
+.circle div:nth-child(2) {
+	color: orange;
+}
+.circle div:nth-child(3) {
+	color: rgb(13, 255, 0);
+}
