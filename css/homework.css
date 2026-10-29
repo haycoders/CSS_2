@@ -1,0 +1,24 @@
+/*
+	ДОМАШНЕЕ ЗАДАНИЕ: круг с цифрами
+
+	В HTML уже есть блок .circle с тремя цифрами внутри.
+	Оформи его сам по условию:
+
+	1. Круг 100x100 пикселей, фон #5825ff, border-radius: 50%.
+	2. При наведении (:hover) фон меняется на orangered.
+	3. При нажатии (:active) круг слегка уменьшается: transform: scale(.9).
+	4. Цифры 1, 2, 3 внутри окрашены в разные цвета через :nth-child().
+
+	Бонус: плавность через transition и центрирование цифр через flex.
+*/
+
+.circle {
+	/* твой код */
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	transition: 0.7s ease-in-out, transform .2s ease;
+}

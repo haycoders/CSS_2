@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS 2 Lesson</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/homework.css">
+</head>
+<body>
+
+	<header class="header">
+		<h1 class="header-title">Псевдоклассы и псевдоэлементы</h1>
+		<nav class="nav">
+			<ul class="nav-list">
+				<li><a href="#links" class="nav-link">Ссылки</a></li>
+				<li><a href="#forms" class="nav-link">Формы</a></li>
+				<li><a href="#structure" class="nav-link">Структура</a></li>
+				<li><a href="#table" class="nav-link">Таблица</a></li>
+				<li><a href="#elements" class="nav-link">Псевдоэлементы</a></li>
+				<li><a href="#circle" class="nav-link">Homework</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="main-content">
+
+		<section id="links" class="section">
+			<h2 class="section-title">Состояния ссылки</h2>
+			<a href="https://haycoders.com" class="main_link">haycoders website</a>
+			<p class="main_link">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, laudantium.</p>
+			<div class="note">
+				<code>:hover</code> и <code>:active</code> работают на любом элементе, а <code>:link</code> и <code>:visited</code> только на ссылках с href.
+				<br>
+				Абзац реагирует на наведение, но не становится серым.
+			</div>
+		</section>
+
+		<section id="forms" class="section">
+			<h2 class="section-title">Состояния полей формы</h2>
+			<input type="text" placeholder="Type here" disabled>
+			<input type="text" placeholder="Type here">
+			<input type="text" placeholder="Type here" required>
+		</section>
+
+		<section id="structure" class="section structure">
+			<h2 class="section-title">Пустые элементы и позиция</h2>
+			<p class="text">JUST TEXT</p>
+			<p class="text"></p>
+			<p class="text" title="Example text"></p>
+			<!-- Второй абзац пустой и без title, поэтому его не видно. -->
+		</section>
+
+		<section id="table" class="section">
+			<h2 class="section-title">Полосатая таблица: nth-child</h2>
+			<div class="note">
+				<code>nth-child(even)</code> красит чётные строки (2, 4, 6…), <code>odd</code> нечётные, а число красит одну строку. Строки считаются внутри своего родителя, поэтому берём <code>tbody</code>: строка заголовка в <code>thead</code> счёт не сбивает.
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>Fruit</th>
+						<th>Color</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Apple</td>
+						<td>Red</td>
+						<td>$2.50</td>
+					</tr>
+					<tr>
+						<td>Banana</td>
+						<td>Yellow</td>
+						<td>$1.80</td>
+					</tr>
+					<tr>
+						<td>Pear</td>
+						<td>Green</td>
+						<td>$3.20</td>
+					</tr>
+					<tr>
+						<td>Orange</td>
+						<td>Orange</td>
+						<td>$2.90</td>
+					</tr>
+					<tr>
+						<td>Plum</td>
+						<td>Violet</td>
+						<td>$4.10</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section id="elements" class="section">
+			<h2 class="section-title">Псевдоэлементы</h2>
+			<div id="test_id">Example text</div>
+			<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<div class="field"><label class="required">Имя</label></div>
+			<div class="field"><label>Телефон (необязательно)</label></div>
+			<div class="note">
+				<code>::before</code> и <code>::after</code> нельзя выделить мышью, и их не читают скринридеры, поэтому важный текст туда класть нельзя.
+			</div>
+		</section>
+
+		<section id="circle" class="section">
+			<h2 class="section-title">Homework</h2>
+			<div class="circle">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<p class="footer-text">&copy; 2024 - 2026. Hay Coders. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>

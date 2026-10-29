@@ -1,0 +1,91 @@
+@import url(pseudo-classes.css);
+@import url(pseudo-elements.css);
+
+/* ===== ОБЩЕЕ ОФОРМЛЕНИЕ  ===== */
+* {
+	margin: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: #e6e6e6;
+	font-family: "Open Sans", sans-serif;
+}
+
+/* HEADER */
+header {
+	background: #5d84b5;
+}
+h1.header-title {
+	text-align: center;
+	color: white;
+	font-size: 38px;
+	padding: 20px;
+}
+
+/* navbar */
+.nav {
+	background: rgba(255, 255, 255, .15);
+}
+.nav-list {
+	list-style-type: none;
+	margin: 20px 0;
+	padding: 20px 40px;
+}
+.nav-list li {
+	display: inline;
+	margin-right: 40px;
+	font-size: 18px;
+}
+.nav-link {
+	color: #fff;
+	text-decoration: none;
+}
+.nav-link:hover {
+	text-decoration: underline;
+}
+
+/* MAIN */
+h2 {
+	font-family: "Montserrat", sans-serif;
+	margin-bottom: 16px;
+}
+main.main-content {
+	padding: 0 40px;
+}
+.section {
+	background: #fff;
+	border-radius: 12px;
+	padding: 20px 40px;
+	margin: 20px 0;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+}
+p {
+	line-height: 1.5;
+}
+input {
+	padding: 6px 10px;
+	margin-right: 8px;
+}
+.note {
+	font-size: 14px;
+	color: #555;
+	background: #fdfdde;
+	border-left: 3px solid #f8da30;
+	border-radius: 6px;
+	padding: 8px 12px;
+	margin: 12px 0;
+}
+.field {
+	margin-bottom: 8px;
+}
+
+/* FOOTER */
+.footer {
+	color: #fff;
+	background: #203052;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 18px;
+}
